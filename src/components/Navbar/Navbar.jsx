@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import NavLink from "./NavLink";
 import MobileMenu from "./MobileMenu";
+import Logo from "../Logo";
 
 const Navbar = () => {
   return (
@@ -14,18 +15,7 @@ const Navbar = () => {
           <NavLink key={link.title} link={link} />
         ))}
       </div>
-      {/* LOGO */}
-      <div className="lg:w-1/3 lg:justify-center md:hidden lg:flex">
-        <Link
-          href="/"
-          className="flex items-center justify-center p-1 text-sm font-semibold bg-black rounded-md"
-        >
-          <span className="mr-1 text-white">Carson</span>
-          <span className="flex items-center justify-center h-8 text-black bg-white rounded w-14">
-            Haskell
-          </span>
-        </Link>
-      </div>
+      <Logo />
       {/* SOCIALS  */}
       <div className="justify-end hidden w-1/3 gap-4 md:flex">
         {SOCIALS.map((social) => (
