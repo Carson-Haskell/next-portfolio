@@ -1,8 +1,17 @@
 "use client";
+import { useState } from "react";
+import { LINKS } from "./Navbar.constants";
+import { motion } from "framer-motion";
 
 import Link from "next/link";
-import { LINKS } from "./Navbar.constants";
-import { useState } from "react";
+
+import {
+  listItemVariants,
+  listVariants,
+  menuBottomVariants,
+  menuCenterVariants,
+  menuTopVariants
+} from "./animations";
 
 const MobileMenu = () => {
   const [open, setOpen] = useState(false);
@@ -11,22 +20,39 @@ const MobileMenu = () => {
     <div className="md:hidden">
       {/* MENU BUTTON  */}
       <button
-        className="relative z-50 flex flex-col justify-between w-10 h-8"
+        className="relative z-50 flex flex-col justify-between w-10 h-8 cursor-pointer"
         onClick={() => setOpen((prev) => !prev)}
       >
-        <div className="w-10 h-1 bg-black rounded"></div>
-        <div className="w-10 h-1 bg-black rounded"></div>
-        <div className="w-10 h-1 bg-black rounded"></div>
+        <motion.div
+          variants={menuTopVariants}
+          animate={open ? "opened" : "closed"}
+          className="w-10 h-1 origin-left bg-black rounded"
+        ></motion.div>
+        <motion.div
+          variants={menuCenterVariants}
+          animate={open ? "opened" : "closed"}
+          className="w-10 h-1 bg-black rounded"
+        ></motion.div>
+        <motion.div
+          variants={menuBottomVariants}
+          animate={open ? "opened" : "closed"}
+          className="w-10 h-1 origin-left bg-black rounded"
+        ></motion.div>
       </button>
       {/* MOBILE MENU LIST  */}
       {open && (
-        <div className="absolute top-0 left-0 flex flex-col items-center justify-center w-screen h-screen gap-8 text-4xl text-white bg-black">
+        <motion.div
+          variants={listVariants}
+          initial="closed"
+          animate="opened"
+          className="absolute top-0 left-0 z-40 flex flex-col items-center justify-center w-screen h-screen gap-8 text-4xl text-white bg-black"
+        >
           {LINKS.map((link) => (
-            <Link key={link.title} href={link.url}>
-              {link.title}
-            </Link>
+            <motion.div variants={listItemVariants} key={link.title}>
+              <Link href={link.url}>{link.title}</Link>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       )}
     </div>
   );
