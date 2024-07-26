@@ -40,7 +40,7 @@ const Biography = () => {
         doloremque numquam quam nihil.
       </p>
 
-      <span className="italic">
+      <span className="italic text-slate-600">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </span>
 
@@ -58,7 +58,7 @@ const Skills = () => {
         {SKILLS.map((skill) => (
           <div
             key={skill.title}
-            className="p-2 text-sm text-white transition-all duration-300 bg-black rounded cursor-pointer hover:scale-110 hover:shadow-xl"
+            className="p-2 text-white transition-all duration-200 rounded-md cursor-pointer text-md bg-slate-600 ac active:rotate-6 hover:-translate-y-1 hover:shadow-xl"
           >
             {skill.title}
           </div>
@@ -79,27 +79,55 @@ const Experience = () => {
         <div className="flex justify-between h-48">
           {/* LEFT */}
           <div className="w-1/3">
-            <div className="p-3 font-semibold rounded-b-lg bg-slate-800/10 rounded-s-lg">
-              Software Engineer
+            <div className="p-5 font-semibold text-white rounded-b-lg bg-slate-600 rounded-s-lg">
+              Lead Front-end Engineer
             </div>
-            <div className="p-3 text-sm italic">I built things with code</div>
-            <div className="text-sm font-semibold text-blue-400">
-              2022 - 2023
+            <div className="p-3 text-sm italic">
+              I built things with code, and managed things.
             </div>
-            <div className="p-1 text-sm font-semibold rounded bg-slate-800/10 w-fit">
-              TurboMiles
+            <div className="p-3 text-sm font-semibold text-blue-400">
+              2023 - Present
+            </div>
+            <div className="p-2 ml-3 text-sm font-semibold rounded bg-slate-600/10 w-fit">
+              Synesis
             </div>
           </div>
           {/* CENTER */}
-          <div className="w-1/6">
+          <div className="flex justify-center w-1/6">
             {/* LINE */}
             <div className="relative w-1 h-full bg-gray-600 rounded">
               {/* CIRCLE */}
-              <div className="absolute w-5 h-5 rounded-full ring-2 ring-blue-400 bg-slate-800 -left-2"></div>
+              <div className="absolute w-5 h-5 rounded-full bg-slate-600 ring-4 ring-blue-400 -left-2"></div>
             </div>
           </div>
           {/* RIGHT */}
           <div className="w-1/3"></div>
+        </div>
+        <div className="flex justify-between h-48">
+          {/* LEFT */}
+          <div className="w-1/3"></div>
+          {/* CENTER */}
+          <div className="flex justify-center w-1/6">
+            {/* LINE */}
+            <div className="relative w-1 h-full bg-gray-600 rounded">
+              {/* CIRCLE */}
+              <div className="absolute w-5 h-5 rounded-full bg-slate-600 ring-4 ring-blue-400 -left-2"></div>
+            </div>
+          </div>
+          {/* RIGHT */}
+          <div className="w-1/3">
+            {" "}
+            <div className="p-5 font-semibold text-white rounded-b-lg bg-slate-600 rounded-s-lg">
+              Software Engineer | Co-founder
+            </div>
+            <div className="p-3 text-sm italic">I built things with code</div>
+            <div className="p-3 text-sm font-semibold text-blue-400">
+              2023 - Present
+            </div>
+            <div className="p-2 ml-3 text-sm font-semibold rounded bg-slate-600/10 w-fit">
+              TurboMiles
+            </div>
+          </div>
         </div>
       </div>
     </div>

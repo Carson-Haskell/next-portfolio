@@ -1,6 +1,7 @@
 import AnimatedHero from "@/components/AnimatedHero";
 import GradientText from "@/components/GradientText";
 import AnimationProvider from "@/components/AnimationProvider";
+import Link from "next/link";
 
 const Homepage = () => {
   return (
@@ -16,7 +17,7 @@ const Homepage = () => {
         transition={{ duration: 0.8 }}
       >
         {/* TITLE  */}
-        <h1 className="text-4xl font-bold md:text-6xl">
+        <h1 className="text-4xl font-bold md:text-6xl text-slate-600">
           Brilliant & Elegant Slogan, Will Really Capture Attention.
         </h1>
         {/* DESCRIPTION  */}
@@ -32,12 +33,18 @@ const Homepage = () => {
         </p>
         {/* BUTTONS  */}
         <div className="flex w-full gap-4">
-          <button className="px-6 py-4 text-white transition duration-200 bg-black rounded-lg ring-1 ring-black hover:scale-x-105">
+          <Link
+            href="/portfolio"
+            className="px-6 py-4 text-white transition duration-300 bg-black rounded-md shadow-lg ring-1 ring-black hover:scale-95 active:scale-90 shadow-blue-300 hover:shadow-none"
+          >
             View My Work
-          </button>
-          <button className="px-6 py-4 transition duration-200 rounded-lg ring-1 ring-black hover:scale-x-105">
+          </Link>
+          <Link
+            href="/contact"
+            className="px-6 py-4 transition duration-300 rounded-md shadow-lg ring-1 ring-black hover:scale-95 active:scale-90 shadow-blue-300 hover:shadow-none"
+          >
             Contact Me
-          </button>
+          </Link>
         </div>
       </AnimationProvider>
     </div>

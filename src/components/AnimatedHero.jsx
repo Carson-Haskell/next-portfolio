@@ -20,13 +20,13 @@ const AnimatedHero = ({ animationVariant }) => {
       initial={{ y: 20, opacity: 0 }}
       variants={variants}
       animate={animationVariant}
-      className="relative h-1/2 lg:h-full lg:w-1/2"
+      className="relative h-1/2 lg:h-[90%] lg:w-1/2 self-center"
     >
       <Image
         src="/hero.png"
         alt="Picture of a man"
         fill
-        className="object-contain"
+        className="object-contain transition duration-1000 hover:-translate-y-2"
       />
     </motion.div>
   );
