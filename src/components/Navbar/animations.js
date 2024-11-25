@@ -4,9 +4,9 @@ export const menuTopVariants = {
   },
   opened: {
     rotate: 45,
-    backgroundColor: "rgb(255, 255, 255)"
+    backgroundColor: 'rgb(255, 255, 255)'
   }
-};
+}
 
 export const menuCenterVariants = {
   closed: {
@@ -15,7 +15,7 @@ export const menuCenterVariants = {
   opened: {
     opacity: 0
   }
-};
+}
 
 export const menuBottomVariants = {
   closed: {
@@ -23,22 +23,22 @@ export const menuBottomVariants = {
   },
   opened: {
     rotate: -45,
-    backgroundColor: "rgb(255, 255, 255)"
+    backgroundColor: 'rgb(255, 255, 255)'
   }
-};
+}
 
 export const listVariants = {
   closed: {
-    x: "100vw"
+    x: '100vw'
   },
   opened: {
     x: 0,
     transition: {
-      when: "beforeChildren",
+      when: 'beforeChildren',
       staggerChildren: 0.2
     }
   }
-};
+}
 
 export const listItemVariants = {
   closed: {
@@ -49,4 +49,4 @@ export const listItemVariants = {
     x: 0,
     opacity: 1
   }
-};
+}

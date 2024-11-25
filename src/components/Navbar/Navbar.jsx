@@ -1,10 +1,10 @@
-import { LINKS, SOCIALS } from "./Navbar.constants";
+import { LINKS, SOCIALS } from './Navbar.constants'
 
-import Image from "next/image";
-import Link from "next/link";
-import NavLink from "./NavLink";
-import MobileMenu from "./MobileMenu";
-import Logo from "../Logo";
+import Image from 'next/image'
+import Link from 'next/link'
+import NavLink from './NavLink'
+import MobileMenu from './MobileMenu'
+import Logo from '../Logo'
 
 const Navbar = () => {
   return (
@@ -27,7 +27,7 @@ const Navbar = () => {
       {/* RESPONSIVE MENU  */}
       <MobileMenu />
     </div>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

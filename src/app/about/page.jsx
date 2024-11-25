@@ -1,6 +1,6 @@
-import AnimationProvider from "@/components/AnimationProvider";
-import ScrollSvg from "./ScrollSvg";
-import { SKILLS } from "./constants";
+import AnimationProvider from '@/components/AnimationProvider'
+import ScrollSvg from './ScrollSvg'
+import { SKILLS } from './constants'
 
 const About = () => {
   return (
@@ -25,8 +25,8 @@ const About = () => {
         <div className="hidden"></div>
       </div>
     </AnimationProvider>
-  );
-};
+  )
+}
 
 const Biography = () => {
   return (
@@ -46,8 +46,8 @@ const Biography = () => {
 
       <ScrollSvg />
     </div>
-  );
-};
+  )
+}
 
 const Skills = () => {
   return (
@@ -67,18 +67,58 @@ const Skills = () => {
 
       <ScrollSvg />
     </div>
-  );
-};
+  )
+}
 
 const Experience = () => {
   return (
     <div className="flex flex-col justify-center gap-12 pb-48">
       <h1 className="text-2xl font-bold">EXPERIENCE</h1>
       <div>
-        {/* LIST ITEM */}
+        {/* Job 1 - Love Justice International */}
         <div className="flex justify-between h-48">
           {/* LEFT */}
           <div className="w-1/3">
+            <div className="p-5 font-semibold text-white rounded-b-lg bg-slate-600 rounded-s-lg">
+              Software Engineer
+            </div>
+            <div className="p-3 text-sm italic">
+              Assisted in rebuilding Angular application to React
+            </div>
+            <div className="p-3 text-sm font-semibold text-blue-400">
+              2024 - Present
+            </div>
+            <div className="p-2 ml-3 text-sm font-semibold rounded bg-slate-600/10 w-fit">
+              Love Justice International
+            </div>
+          </div>
+          {/* CENTER */}
+          <div className="flex justify-center w-1/6">
+            {/* LINE */}
+            <div className="relative w-1 h-full bg-gray-600 rounded">
+              {/* CIRCLE */}
+              <div className="absolute w-5 h-5 rounded-full bg-slate-600 ring-2 ring-blue-400 -left-2"></div>
+            </div>
+          </div>
+          {/* RIGHT */}
+          <div className="w-1/3"></div>
+        </div>
+
+        {/* Job 2 - Synesis */}
+        <div className="flex justify-between h-48">
+          {/* LEFT */}
+          <div className="w-1/3"></div>
+          {/* CENTER */}
+          <div className="flex justify-center w-1/6">
+            {/* LINE */}
+            <div className="relative w-1 h-full bg-gray-600 rounded">
+              {/* CIRCLE */}
+              <div className="absolute w-5 h-5 rounded-full bg-slate-600 ring-2 ring-blue-400 -left-2"></div>
+            </div>
+          </div>
+          {/* RIGHT */}
+          <div className="w-1/3">
+            {' '}
             <div className="p-5 font-semibold text-white rounded-b-lg bg-slate-600 rounded-s-lg">
               Lead Front-end Engineer
             </div>
@@ -86,52 +126,41 @@ const Experience = () => {
               I built things with code, and managed things.
             </div>
             <div className="p-3 text-sm font-semibold text-blue-400">
-              2023 - Present
+              2023 - 2024
             </div>
             <div className="p-2 ml-3 text-sm font-semibold rounded bg-slate-600/10 w-fit">
               Synesis
             </div>
           </div>
-          {/* CENTER */}
-          <div className="flex justify-center w-1/6">
-            {/* LINE */}
-            <div className="relative w-1 h-full bg-gray-600 rounded">
-              {/* CIRCLE */}
-              <div className="absolute w-5 h-5 rounded-full bg-slate-600 ring-4 ring-blue-400 -left-2"></div>
-            </div>
-          </div>
-          {/* RIGHT */}
-          <div className="w-1/3"></div>
         </div>
+
+        {/* Job 3 - TurboMiles */}
         <div className="flex justify-between h-48">
           {/* LEFT */}
-          <div className="w-1/3"></div>
-          {/* CENTER */}
-          <div className="flex justify-center w-1/6">
-            {/* LINE */}
-            <div className="relative w-1 h-full bg-gray-600 rounded">
-              {/* CIRCLE */}
-              <div className="absolute w-5 h-5 rounded-full bg-slate-600 ring-4 ring-blue-400 -left-2"></div>
-            </div>
-          </div>
-          {/* RIGHT */}
           <div className="w-1/3">
-            {" "}
             <div className="p-5 font-semibold text-white rounded-b-lg bg-slate-600 rounded-s-lg">
-              Software Engineer | Co-founder
+              Full Stack Developer | Co-founder
             </div>
             <div className="p-3 text-sm italic">I built things with code</div>
-            <div className="p-3 text-sm font-semibold text-blue-400">
-              2023 - Present
-            </div>
+            <div className="p-3 text-sm font-semibold text-blue-400">2023</div>
             <div className="p-2 ml-3 text-sm font-semibold rounded bg-slate-600/10 w-fit">
               TurboMiles
             </div>
           </div>
+          {/* CENTER */}
+          <div className="flex justify-center w-1/6">
+            {/* LINE */}
+            <div className="relative w-1 h-full bg-gray-600 rounded">
+              {/* CIRCLE */}
+              <div className="absolute w-5 h-5 rounded-full bg-slate-600 ring-2 ring-blue-400 -left-2"></div>
+            </div>
+          </div>
+          {/* RIGHT */}
+          <div className="w-1/3"></div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default About;
+export default About

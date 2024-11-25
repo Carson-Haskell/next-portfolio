@@ -1,18 +1,18 @@
-"use client";
+'use client'
 
-import Image from "next/image";
-import { motion } from "framer-motion";
+import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 const variants = {
   default: {
     y: 0,
     opacity: 1,
     transition: {
-      type: "spring",
+      type: 'spring',
       duration: 4
     }
   }
-};
+}
 
 const AnimatedHero = ({ animationVariant }) => {
   return (
@@ -20,7 +20,7 @@ const AnimatedHero = ({ animationVariant }) => {
       initial={{ y: 20, opacity: 0 }}
       variants={variants}
       animate={animationVariant}
-      className="relative h-1/2 lg:h-[90%] lg:w-1/2 self-center"
+      className="relative h-1/2 w-1/2 lg:h-[85%] lg:w-1/2 self-center"
     >
       <Image
         src="/hero.png"
@@ -29,7 +29,7 @@ const AnimatedHero = ({ animationVariant }) => {
         className="object-contain transition duration-1000 hover:-translate-y-2"
       />
     </motion.div>
-  );
-};
+  )
+}
 
-export default AnimatedHero;
+export default AnimatedHero
